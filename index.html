@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Validation Form</h1>
+      <p id="description">
+        Each required form group has a validation state that can be triggered by
+        attempting to submit the form without completing it.
+      </p>
+    </header>
+    <form id="survey-form">
+      <section>
+        <h2>Personal Information</h2>
+        <div class="input">
+          <label for="name"> First Name </label>
+          <input
+            class="target"
+            name="name"
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="lastName"> Last Name </label>
+          <input
+            class="target"
+            name="lastName"
+            id="lastName"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="input">
+          <label for="username" class="username"> Username </label>
+          <div class="target">
+            <span>@</span>
+            <input
+              name="username"
+              id="username"
+              type="text"
+              placeholder="Username"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="input">
+          <label for="email"> Email <span>(opcional)</span> </label>
+          <input
+            class="target"
+            name="email"
+            id="email"
+            type="email"
+            placeholder="you@example.com"
+          />
+        </div>
+        <div class="input">
+          <label for="address"> Address </label>
+          <input
+            class="target"
+            name="address"
+            id="addres"
+            type="text"
+            placeholder="1234 Main St"
+          />
+        </div>
+
+        <div class="input">
+          <label for="number">Age</label>
+          <input
+            class="target"
+            name="age"
+            id="number"
+            type="number"
+            min="10"
+            max="150"
+            placeholder="Age"
+          />
+        </div>
+      </section>
+      <section>
+        <h2>Information Section</h2>
+        <div class="input">
+          <label for="role"
+            >Which option best describes your current role</label
+          >
+          <select name="role" id="role" class="target">
+            <option value="" disabled selected>Select current role</option>
+            <option value="student">Student</option>
+            <option value="full time job">Full Time Job</option>
+            <option value="full time learner">Full Time Learner</option>
+            <option value="prefer not to say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="list">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <div class="list-item">
+            <input
+              id="definitely"
+              name="recommend"
+              type="radio"
+              value="definitely"
+            />
+            <label for="definitely">Definitely</label>
+          </div>
+          <div class="list-item">
+            <input id="maybe" name="recommend" type="radio" value="maybe" />
+            <label for="maybe"> Maybe </label>
+          </div>
+
+          <div class="list-item">
+            <input
+              id="notSure"
+              name="recommend"
+              type="radio"
+              value="not sure"
+            />
+            <label for="notSure">Not sure </label>
+          </div>
+        </div>
+
+        <div class="list">
+          <p>
+            What would you like to see improved?
+            <span>(Check all that apply)</span>
+          </p>
+          <div class="list-item">
+            <input
+              name="improved"
+              type="checkbox"
+              id="front-end projects"
+              value="front-end projects"
+            />
+            <label for="front-end projects"> Front-end Projects </label>
+          </div>
+
+          <div class="list-item">
+            <input
+              name="improved"
+              type="checkbox"
+              id="back-end projects"
+              value="back-end projects"
+            />
+            <label for="back-end projects"> Back-end Projects </label>
+          </div>
+          <div class="list-item">
+            <input
+              name="improved"
+              type="checkbox"
+              id="data visualization"
+              value="data visualization"
+            />
+            <label for="data visualization"> Data Visualization </label>
+          </div>
+          <div class="list-item">
+            <input
+              name="improved"
+              type="checkbox"
+              id="challenges"
+              value="challenges"
+            />
+            <label for="challenges"> Challenges </label>
+          </div>
+          <div class="list-item">
+            <input
+              name="improved"
+              type="checkbox"
+              id="open source communinity"
+              value="open source communinity"
+            />
+            <label for="open source communinity"> Open Source Community </label>
+          </div>
+          <div class="list-item">
+            <input
+              name="improved"
+              type="checkbox"
+              id="gitter help rooms"
+              value="gitter help rooms"
+            />
+            <label for="gitter help rooms"> Gitter help rooms </label>
+          </div>
+          <div class="list-item">
+            <input name="improved" type="checkbox" id="videos" value="videos" />
+            <label for="videos"> Videos </label>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Any comments or suggestions</h2>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+      </section>
+
+      <input id="submit" type="submit" value="Continue to submit" />
+    </form>
+    <footer>
+      <div>&copy 2017-2021 Company Name</div>
+      <div>
+        <ul>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
